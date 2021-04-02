@@ -250,7 +250,7 @@ __Counties on the table were chosen at random.__
 .pull-right[
 
 
-- Plugging in a negative value for Change in Soybean production in the equation below has a positive association with Change in Democratic Vote Share from 2016 to 2018.
+- Plugging in a negative value for Change in Soybean production in the equation below shows a positive association with Change in Democratic Vote Share from 2016 to 2018.
 
 - This means if there was a decrease in Soybean production from 2018 to 2019, then there would be a positive association in Change in Democratic Vote Share from 2016 to 2018.  
 
@@ -262,7 +262,7 @@ class: middle, left
 
 # Limitations:
 
-1. USDA has not reported soybean and corn production data for many counties in 2018 which reduces the number of observations when regressing the dependent variable to the independent variable in the model.
+1. USDA has not reported soybean and corn production data for many counties in 2018 and 2019 which reduces the number of observations when regressing the dependent variable to the independent variable in the model.
  - A follow-up analysis shows that there is no systematic differences between counties with and without missing data.
 
 2. The votes drop off from Presidential Election to Midterm Election is not accounted for in the model.
@@ -276,11 +276,11 @@ class: middle, left
 .can-edit[
 1. Changes in Soybean production from 2018 to 2019 had an effect on the Change in Democratic vote share from 2016 to 2018. A decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic voting.   
   
-2. This effect is slightly reduced as soon as historical voting pattern is controlled for. Historical voting pattern, the control variable, is accounted for by Change in Republican Vote Share from 2008 to 2010. 
+2. This effect is slightly reduced as soon as historical voting patterns is controlled for. Historical voting patterns, the control variable, is accounted for by Change in Republican Vote Share from 2008 to 2010. 
   
 3. Likewise, when  controlling for historical voting pattern, the median household income was able to explain some of the variance in the dependent variable.
   
-5. Lastly, our analysis is only able to explain very little about the variance in change in Democratic Vote Share from 2016 to 2018 since our $R^2$ is very low.
+5. Lastly, our analysis is only able to explain very little about the variance in change in Democratic Vote Share from 2016 to 2018 since the $R^2$ is very low.
 ]
 
 
