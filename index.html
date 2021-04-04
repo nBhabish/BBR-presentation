@@ -6,11 +6,12 @@
     <script src="index_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="index_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="index_files/tile-view-0.2.6/tile-view.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x93ab4200c8f4862b06c45684d7a31ca","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e065cfeb70ea41a69745d8cc380cf7af","expires":14}</script>
     <script src="index_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="index_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="index_files/editable-0.2.6/editable.css" rel="stylesheet" />
     <script src="index_files/editable-0.2.6/editable.js"></script>
+    <link href="index_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
     <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
     <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
@@ -33,6 +34,9 @@ class: middle, center, inverse
 
 
 
+
+
+
 &lt;style type="text/css"&gt;
 .remark-slide-content {
     font-size: 15px;
@@ -40,6 +44,9 @@ class: middle, center, inverse
 }
 .my-one-page-font {
   font-size: 14px;
+}
+.my-large-page-font {
+  font-size: 18px;
 }
 &lt;/style&gt;
 
@@ -50,29 +57,27 @@ class: middle, center, inverse
 Bhabishya Neupane | Bureau of Business Research | April 2, 2021
 ]
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Motivation:
 
-On July 6, 2018, President Trump’s administration imposed tariffs on $34 billion worth of Chinese goods, including televisions, aircraft parts, and medical devices. In retaliation, China responded by imposing tariffs on agricultural products. China’s decision to impose retaliatory tariffs has had an unfortunate consequence on the agricultural producers of the US- particularly on soybean producers. Many farmers across different states in the U.S. support the Republican party and President Trump.
+On July 6, 2018, President Trump’s administration imposed tariffs on $34 billion worth of Chinese goods, including televisions, aircraft parts, and medical devices. These tariffs were met by swift retaliation from China as they decided to impose tariffs on  agricultural products form the United States. This decision from China had a negative impact on agricultural producers of the United States - especially on the soybean producers, among which support for Trump and the Republican Party tended to be high.
 
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 #Research Question:
 
-
-Are the soybean producing counties more likely to shift their votes to Democratic candidates after China's retaliatory tariffs right before the midterm election?
-
+Following China's retaliatory tariffs before the midterm election, were soybean producing counties more likely to see shifts in the vote share toward Democratic candidates?
 
 ---
 
 
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Method:
 
-- Factors that contribute towards the reduction or growth in Change in Democratic Vote Share from 2016 to 2018 is estimated using Ordinary Least Square (OLS) regression.  
+- Factors that contribute to the reduction or growth in Change in Democratic Vote Share from 2016 to 2018 is estimated using Ordinary Least Square (OLS) regression.  
   
 - Dependent variable is Change in Democratic Vote Share from 2016 to 2018.  
   
@@ -82,20 +87,20 @@ class: middle, left
     
   2. Percent change in Corn production from 2018 to 2019
     
-  3. Median Household Income of 2018
+  3. Median Household Income in 2018
     
-  4. Unemployment Rate of 2018
+  4. Unemployment Rate in 2018
     
   5. Acres of Soybean planted in 2018
 
   6. Change in Republican Vote Share from 2008 and 2010
   
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Data Sources:
 
-- Data collected are county-level data.  
+- Data collected are county level.  
   
 - Corn and Soybean production and acres planted data comes from United States Department of Agriculture (USDA).  
   
@@ -128,9 +133,9 @@ where,
   
 `\(\beta_1ChangeInCornProd\)` = Percent change in Corn production from 2018 to 2019  
   
-`\(\beta_2MedianHHIncome\)` = Median Household Income of 2018  
+`\(\beta_2MedianHHIncome\)` = Median Household Income in 2018  
   
-`\(\beta_3UnempRate\)` = Unemployment Rate of 2018  
+`\(\beta_3UnempRate\)` = Unemployment Rate in 2018  
   
 `\(\beta_4AcresOfSoyPlanted\)` = Acres of Soybean planted in 2018  
   
@@ -232,42 +237,52 @@ __Counties on the table were chosen at random.__
 .pull-right[
 
 
-- Plugging in a negative value for Change in Soybean production in the equation below shows a positive association with Change in Democratic Vote Share from 2016 to 2018.
+- Plugging in a negative value for Changes in Soybean production into the equation below shows a positive association with Change in Democratic Vote Share from 2016 to 2018.
 
-- This means if there was a decrease in Soybean production from 2018 to 2019, then there would be a positive association in Change in Democratic Vote Share from 2016 to 2018.  
+- This means a decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic voting.     
 
 `\(ChangeInDemVoteShare\)` = `\(-0.026\)` - `\(0.082ChangeInSoyProd\)` + `\(0.037ChangeInCornProd\)` + `\(0.005MedianHHIncome\)` + `\(0.002UnempRate\)` + `\(0.005AcresOfSoyPlanted\)`
 
 ]
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Limitations:
 
-1. USDA has not reported soybean and corn production data for many counties in 2018 and 2019 which reduces the number of observations when regressing the dependent variable to the independent variable in the model.
- - A follow-up analysis shows that there is no systematic differences between counties with and without missing data.
+1. USDA has not reported soybean and corn production data for many counties in 2018 and 2019 which limits the number of observations in the regression model.
+ - A follow-up analysis shows that there are no systematic differences between counties with and without missing data.
 
-2. The votes drop off from Presidential Election to Midterm Election is not accounted for in the model.
+2. The difference in voter turnout between presidential and midterm elections is not accounted for in the model.
 
 
 ---
 
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Conclusion:
 .can-edit[
-1. Changes in Soybean production from 2018 to 2019 had an effect on the Change in Democratic vote share from 2016 to 2018. A decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic voting.   
+1. Changes in Soybean production from 2018 to 2019 had an effect on the Change in Democratic vote share from 2016 to 2018. A decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic vote share.   
   
-2. This effect is slightly reduced as soon as historical voting patterns is controlled for. Historical voting patterns, the control variable, is accounted for by Change in Republican Vote Share from 2008 to 2010. 
+2. This effect is slightly reduced when historical voting patterns are controlled for. Historical voting patterns, the control variable, is accounted for by Change in Republican Vote Share from 2008 to 2010 in the model.
   
-3. Likewise, when  controlling for historical voting pattern, the median household income was able to explain some of the variance in the dependent variable.
+3. Likewise, when  controlling for historical voting patterns, the median household income was able to explain some of the variance in the dependent variable.
   
-5. Lastly, our analysis is only able to explain very little about the variance in change in Democratic Vote Share from 2016 to 2018 since the `\(R^2\)` is very low.
+5. Lastly, the model is able to explain very little about the variance in change in Democratic Vote Share from 2016 to 2018 since the `\(R^2\)` is very low.
 ]
 
+---
+class: my-large-page-font, center, middle, inverse
 
+# Acknowledgements:
 
-
+   Dr. Mitch Herian,    
+  Project Director,  
+  Bureau of Business Research  
+  
+  
+   Dr. Uchechukwu Jarrett,  
+  Assistant Professor of Practice in Economics,  
+  Department of Economics  
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

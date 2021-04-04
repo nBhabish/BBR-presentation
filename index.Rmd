@@ -14,18 +14,21 @@ background-size: 7.5%
 class: middle, center, inverse
 
 ```{r xaringan-tile-view, echo = FALSE}
-
 xaringanExtra::use_tile_view()
 ```
 
 ```{r xaringan-animate, echo=FALSE}
 #xaringanExtra::use_animate_all("slide_left")
-
 ```
 
 ```{r xaringan-editable, echo = FALSE}
 xaringanExtra::use_editable()
 ```
+
+```{r xaringan-tachyons, echo = FALSE}
+xaringanExtra::use_tachyons()
+```
+
 
 
 
@@ -37,13 +40,16 @@ xaringanExtra::use_editable()
 .my-one-page-font {
   font-size: 14px;
 }
+.my-large-page-font {
+  font-size: 18px;
+}
 </style>
 
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
 style_mono_accent(base_color = "#d00000",
-                  header_font_google = google_font("Saira Semi Condensed"), #Cinzel, Sacramento
-                  text_font_google   = google_font("Montserrat", "300", "300i"))
+                  header_font_google = google_font("Saira Semi Condensed"), #Cinzel, Sacramento, Montserrat, Lora
+                  text_font_google   = google_font("Lora", "300", "300i"))
 
 ```
 # Impact of China's Retaliatory Tariffs on Democratic Vote Share Between 2016 and 2018
@@ -52,29 +58,27 @@ style_mono_accent(base_color = "#d00000",
 Bhabishya Neupane | Bureau of Business Research | April 2, 2021
 ]
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Motivation:
 
-On July 6, 2018, President Trump’s administration imposed tariffs on $34 billion worth of Chinese goods, including televisions, aircraft parts, and medical devices. In retaliation, China responded by imposing tariffs on agricultural products. China’s decision to impose retaliatory tariffs has had an unfortunate consequence on the agricultural producers of the US- particularly on soybean producers. Many farmers across different states in the U.S. support the Republican party and President Trump.
+On July 6, 2018, President Trump’s administration imposed tariffs on $34 billion worth of Chinese goods, including televisions, aircraft parts, and medical devices. These tariffs were met by swift retaliation from China as they decided to impose tariffs on  agricultural products form the United States. This decision from China had a negative impact on agricultural producers of the United States - especially on the soybean producers, among which support for Trump and the Republican Party tended to be high.
 
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 #Research Question:
 
-
-Are the soybean producing counties more likely to shift their votes to Democratic candidates after China's retaliatory tariffs right before the midterm election?
-
+Following China's retaliatory tariffs before the midterm election, were soybean producing counties more likely to see shifts in the vote share toward Democratic candidates?
 
 ---
 
 
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Method:
 
-- Factors that contribute towards the reduction or growth in Change in Democratic Vote Share from 2016 to 2018 is estimated using Ordinary Least Square (OLS) regression.  
+- Factors that contribute to the reduction or growth in Change in Democratic Vote Share from 2016 to 2018 is estimated using Ordinary Least Square (OLS) regression.  
   
 - Dependent variable is Change in Democratic Vote Share from 2016 to 2018.  
   
@@ -84,20 +88,20 @@ class: middle, left
     
   2. Percent change in Corn production from 2018 to 2019
     
-  3. Median Household Income of 2018
+  3. Median Household Income in 2018
     
-  4. Unemployment Rate of 2018
+  4. Unemployment Rate in 2018
     
   5. Acres of Soybean planted in 2018
 
   6. Change in Republican Vote Share from 2008 and 2010
   
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Data Sources:
 
-- Data collected are county-level data.  
+- Data collected are county level.  
   
 - Corn and Soybean production and acres planted data comes from United States Department of Agriculture (USDA).  
   
@@ -130,9 +134,9 @@ $\beta_0ChangeInSoyProd$ = Percent change in Soybean production from 2018 to 201
   
 $\beta_1ChangeInCornProd$ = Percent change in Corn production from 2018 to 2019  
   
-$\beta_2MedianHHIncome$ = Median Household Income of 2018  
+$\beta_2MedianHHIncome$ = Median Household Income in 2018  
   
-$\beta_3UnempRate$ = Unemployment Rate of 2018  
+$\beta_3UnempRate$ = Unemployment Rate in 2018  
   
 $\beta_4AcresOfSoyPlanted$ = Acres of Soybean planted in 2018  
   
@@ -232,13 +236,6 @@ election_stateBind %>%
   knitr::kable(format = "html") %>% 
   kable_styling(font_size = 10)
 
-
-  # election_reg1 %>% 
-  # group_by(state) %>% 
-  # summarise(Ch_soy_18to19 = mean(Ch_soy_18to19),
-  #           Ch_corn_18to19 = mean(Ch_corn_18to19)) %>% 
-  # head(10) %>% 
-  # knitr::kable(format = "html")
 ```
 
 __Counties on the table were chosen at random.__
@@ -250,40 +247,50 @@ __Counties on the table were chosen at random.__
 .pull-right[
 
 
-- Plugging in a negative value for Change in Soybean production in the equation below shows a positive association with Change in Democratic Vote Share from 2016 to 2018.
+- Plugging in a negative value for Changes in Soybean production into the equation below shows a positive association with Change in Democratic Vote Share from 2016 to 2018.
 
-- This means if there was a decrease in Soybean production from 2018 to 2019, then there would be a positive association in Change in Democratic Vote Share from 2016 to 2018.  
+- This means a decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic voting.     
 
 $ChangeInDemVoteShare$ = $-0.026$ - $0.082ChangeInSoyProd$ + $0.037ChangeInCornProd$ + $0.005MedianHHIncome$ + $0.002UnempRate$ + $0.005AcresOfSoyPlanted$
 
 ]
 ---
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Limitations:
 
-1. USDA has not reported soybean and corn production data for many counties in 2018 and 2019 which reduces the number of observations when regressing the dependent variable to the independent variable in the model.
- - A follow-up analysis shows that there is no systematic differences between counties with and without missing data.
+1. USDA has not reported soybean and corn production data for many counties in 2018 and 2019 which limits the number of observations in the regression model.
+ - A follow-up analysis shows that there are no systematic differences between counties with and without missing data.
 
-2. The votes drop off from Presidential Election to Midterm Election is not accounted for in the model.
+2. The difference in voter turnout between presidential and midterm elections is not accounted for in the model.
 
 
 ---
 
-class: middle, left
+class: my-large-page-font, middle, left
 
 # Conclusion:
 .can-edit[
-1. Changes in Soybean production from 2018 to 2019 had an effect on the Change in Democratic vote share from 2016 to 2018. A decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic voting.   
+1. Changes in Soybean production from 2018 to 2019 had an effect on the Change in Democratic vote share from 2016 to 2018. A decrease in Soybean production from 2018 to 2019 is associated with an increase in Democratic vote share.   
   
-2. This effect is slightly reduced as soon as historical voting patterns is controlled for. Historical voting patterns, the control variable, is accounted for by Change in Republican Vote Share from 2008 to 2010. 
+2. This effect is slightly reduced when historical voting patterns are controlled for. Historical voting patterns, the control variable, is accounted for by Change in Republican Vote Share from 2008 to 2010 in the model.
   
-3. Likewise, when  controlling for historical voting pattern, the median household income was able to explain some of the variance in the dependent variable.
+3. Likewise, when  controlling for historical voting patterns, the median household income was able to explain some of the variance in the dependent variable.
   
-5. Lastly, our analysis is only able to explain very little about the variance in change in Democratic Vote Share from 2016 to 2018 since the $R^2$ is very low.
+5. Lastly, the model is able to explain very little about the variance in change in Democratic Vote Share from 2016 to 2018 since the $R^2$ is very low.
 ]
 
+---
+class: my-large-page-font, center, middle, inverse
 
+# Acknowledgements:
 
-
+   Dr. Mitch Herian,    
+  Project Director,  
+  Bureau of Business Research  
+  
+  
+   Dr. Uchechukwu Jarrett,  
+  Assistant Professor of Practice in Economics,  
+  Department of Economics  
 
