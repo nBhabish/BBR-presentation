@@ -55,7 +55,7 @@ style_mono_accent(base_color = "#d00000",
 # Impact of China's Retaliatory Tariffs on Democratic Vote Share Between 2016 and 2018
 
 .middle[
-Bhabishya Neupane | Bureau of Business Research | April 2, 2021
+Bhabishya Neupane | Bureau of Business Research | April 5, 2021
 ]
 ---
 class: my-large-page-font, middle, left
