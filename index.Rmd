@@ -107,7 +107,7 @@ class: my-large-page-font, middle, left
   
 - Election data for House of Representative comes from Secretary of State website from each state secretary’s website.
   
-- Our Median Household Income and Unemployment rate data comes from either American Community Survey (ACS) or Bureau of Labor Statistics (BLS).  
+- Our Median Household Income and Unemployment rate data comes from American Community Survey (ACS) and Bureau of Labor Statistics (BLS).  
 
 
 ---
@@ -161,7 +161,7 @@ knitr::include_graphics("img/regressionResults_Scaled.png")
 
 class: my-one-page-font, top, middle
 
-### Predicting Change in Democratic Vote Share from 2016 to 2018
+### Predicting Change in Democratic Vote Share from 2016 to 2018:
 
 
 .pull-left[
@@ -264,7 +264,7 @@ class: my-large-page-font, middle, left
 
 2. The difference in voter turnout between presidential and midterm elections is not accounted for in the model.   
   
-3. Model contains data for 42/50 states, but includes all major agricultural states.
+3. Model contains data for 42/50 states, but includes all major soybean producing states.
 
 
 ---
