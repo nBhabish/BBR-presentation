@@ -262,7 +262,9 @@ class: my-large-page-font, middle, left
 1. USDA has not reported soybean and corn production data for many counties in 2018 and 2019 which limits the number of observations in the regression model.
  - A follow-up analysis shows that there are no systematic differences between counties with and without missing data.
 
-2. The difference in voter turnout between presidential and midterm elections is not accounted for in the model.
+2. The difference in voter turnout between presidential and midterm elections is not accounted for in the model.   
+  
+3. Model contains data for 42/50 states, but includes all major agricultural states.
 
 
 ---
